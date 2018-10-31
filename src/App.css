@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  height: 45em;
+}
+
+.content {
+  padding: 1em;
+}
+
+.menu-list {
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16.6666em;
+  list-style: none;
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  overflow: auto;
+  height: 100%;
+}
+
+.menu-list li {
+  padding: 5px 15px;
+  color: #2175bc;
+}
+
+.menu-list li.is-active {
+  background-color: #2175bc;
+  color: #fff !important;
+}
+
+.link {
+  display: block;
+  cursor: pointer;
+}
+
+input {
+  padding: 7px;
+  outline: none;
+}
+
+button {
+  color: #fff;
+  background-color: #38f;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.wizard-finish-step li {
+  list-style: none;
+  padding: 10px;
+}
+
+.wizard-finish-step label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+/* 每个演示功能的描述 */
+.description {
+  margin: 1em 0 2em 0;
+  padding: 1em 0.3333em;
+  background-color: #ccc;
+  border-radius: 0.3333em;
+}
+
+.default-content {
+  border: 1px dashed grey;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}

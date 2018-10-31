@@ -1,0 +1,28 @@
+.test {
+  border: 1px solid black;
+  top: 0;
+  right: 9;
+  bottom: 9;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}
+
+.test > .item {
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+
+.dnd-sample-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}

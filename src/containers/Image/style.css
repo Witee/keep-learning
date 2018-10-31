@@ -1,0 +1,13 @@
+#image-test .description {
+  width: 600px;
+}
+
+#image-test>.image-father {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+}
+
+#image-test>.image-father .thumbnail-image {
+  max-width: 100%;
+}

@@ -1,0 +1,27 @@
+.div-move-x {
+  border: 1px solid black;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}
+
+.div-move-x > .item {
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100px;
+}
+
+
+.div-move-x-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}

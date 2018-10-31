@@ -1,0 +1,63 @@
+.rich-text-work-area {
+  border: 1px dashed #ddd;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}
+
+.rich-text-article-content {
+  position: relative;
+  word-break: break-all;
+  outline: 0;
+  min-height: 30px;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.rich-text-resizer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 255;
+  pointer-events: none;
+  border: 1px solid #1baee1;
+  font-size: 12px;
+}
+
+.rich-text-resizer .rich-text-anchor {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #1baee1;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.rich-text-resizer .rich-text-anchor[data-direction=left] {
+  right: 100%;
+  top: 50%;
+  margin-top: -.5em;
+  margin-right: -.5em;
+  cursor: col-resize
+}
+
+.rich-text-resizer .rich-text-anchor[data-direction=right] {
+  left: 100%;
+  top: 50%;
+  margin-top: -.5em;
+  margin-left: -.5em;
+  cursor: col-resize
+}

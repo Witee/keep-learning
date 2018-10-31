@@ -1,0 +1,36 @@
+#photo-wall .description {
+  width: 600px;
+}
+
+#photo-wall .container {
+  width: 600px;
+  height: 600px;
+  border: 1px dashed #ccc;
+}
+
+#photo-wall .container .photo {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  height: 16em;
+}
+
+#photo-wall .container .photo .description-text {
+  padding: 1em 0;
+  color: #999
+}
+
+#photo-wall .container .photo img {
+  max-width: 100%;
+  max-height: 100%
+}
+
+#photo-wall .container .photo:hover {
+  box-shadow: 0 1px 1em #019BF0;
+  border-color: #019BF0;
+}

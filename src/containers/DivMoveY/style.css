@@ -1,0 +1,25 @@
+#div-move-y ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+#div-move-y li {
+  cursor: default;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin: 0;
+  width: 300px;
+  background-color: #fff;
+}
+
+#div-move-y .div-move-y-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}

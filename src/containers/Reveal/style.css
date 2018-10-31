@@ -1,0 +1,16 @@
+.reveal-work-area {
+  border: 1px dashed #ddd;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}
+
+reveal-preview .slides>section, .reveal .slides>section {
+  -ms-perspective: 600px;
+  height: 100%;
+}

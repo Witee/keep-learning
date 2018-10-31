@@ -1,0 +1,17 @@
+.hammer-js-work-area {
+  border: 1px dashed #ddd;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  height: 600px;
+}
+
+.hammer-item {
+  background-color: grey;
+  height: 100px;
+  width: 100px;
+}
