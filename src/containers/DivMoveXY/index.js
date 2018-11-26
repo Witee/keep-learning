@@ -20,12 +20,10 @@ class App extends Component {
       transform: `translate(${offsetPageX}px, ${offsetPageY}px)`,
       opacity: 0.5,
     };
-    console.log('style: ', style);
     return style;
   }
 
   handleMounseDown = (evt, index) => {
-    console.log('=================================');
     this.setState({
       dragging: true,
       startPageX: evt.pageX,
@@ -36,8 +34,6 @@ class App extends Component {
 
   handleMouseMove = (evt) => {
     const { startPageX, startPageY, offsetPageX, offsetPageY } = this.state;
-    console.log('evt.pageX - startPageX = : ', `${evt.pageX} - ${startPageX} = ${evt.pageX - startPageX}`);
-    console.log('evt.pageY- startPageY = : ', `${evt.pageY} - ${startPageY} = ${evt.pageY - startPageY}`);
     const newOffsetPageX = offsetPageX + (evt.pageX - startPageX);
     const newOffsetPageY = offsetPageY + (evt.pageY - startPageY);
 

@@ -1,0 +1,12 @@
+#render-props .container button {
+  margin: 1em
+}
+
+#render-props[data-theme=black] .container {
+  background-color: black;
+  color: #fff
+}
+
+#render-props[data-theme=white] .container {
+  background-color: white;
+}

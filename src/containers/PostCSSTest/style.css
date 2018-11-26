@@ -1,0 +1,12 @@
+#postcss-test .container button {
+  margin: 1em
+}
+
+#postcss-test[data-theme=black] .container {
+  background-color: black;
+  color: #fff
+}
+
+#postcss-test[data-theme=white] .container {
+  background-color: white;
+}

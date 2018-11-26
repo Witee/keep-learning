@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactEcharts from 'echarts-for-react';
+// import ReactEcharts from 'echarts-for-react';
 import './style.css';
 import { Chart } from 'open-combine-design';
 import Container from './Container';

@@ -54,16 +54,14 @@ class App extends Component {
           // { src: '/reveal/plugin/math/math.js', async: true },
         ],
       });
-      this.Reveal.addEventListener('slidechanged', (evt) => {
-        console.log('evt: ', evt);
-      });
+      // this.Reveal.addEventListener('slidechanged', (evt) => {
+      //   console.log('evt: ', evt);
+      // });
     });
   }
 
   onClick = (index) => {
-    console.log('index: ', index);
     this.Reveal.slide(index);
-    console.log('slide: ', this.Reveal.getState());
   }
 
   render() {

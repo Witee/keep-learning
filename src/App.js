@@ -12,6 +12,10 @@ import Hammer from './containers/Hammer';
 import HammerRichEditor from './containers/HammerRichEditor';
 import Image from './containers/Image';
 import PhotoWall from './containers/PhotoWall';
+import PostCSSTest from './containers/PostCSSTest';
+import Button from './containers/Button';
+import RenderProps from './containers/RenderProps';
+import Anchor from './containers/Anchor';
 
 const routeMap = {
   DndSample,
@@ -25,6 +29,10 @@ const routeMap = {
   HammerRichEditor,
   Image,
   PhotoWall,
+  PostCSSTest,
+  Button,
+  RenderProps,
+  Anchor,
 };
 
 
@@ -40,7 +48,7 @@ class App extends React.PureComponent {
     const CurrentPage = routeMap[currentPage] || Hello;
 
     return (
-      <div className="container">
+      <div className="root-container">
         <ul className="menu-list">
           {Object.keys(routeMap).map((key) => (
             <li

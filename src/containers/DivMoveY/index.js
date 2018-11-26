@@ -85,7 +85,7 @@ class App extends Component {
     return {
       backgroundColor: '#eee',
       transform: `translate(10px, ${offsetPageY}px)`,
-      opacity: 0.5,
+      // opacity: 0.5,
     };
   }
 
