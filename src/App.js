@@ -16,6 +16,7 @@ import PostCSSTest from './containers/PostCSSTest';
 import Button from './containers/Button';
 import RenderProps from './containers/RenderProps';
 import Anchor from './containers/Anchor';
+import Affix from './containers/Affix';
 
 const routeMap = {
   DndSample,
@@ -33,6 +34,7 @@ const routeMap = {
   Button,
   RenderProps,
   Anchor,
+  Affix,
 };
 
 
