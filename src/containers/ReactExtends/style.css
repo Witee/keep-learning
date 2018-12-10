@@ -1,0 +1,9 @@
+#parent .test-parent {
+  position: absolute;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #1baee1;
+  cursor: pointer;
+}

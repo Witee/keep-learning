@@ -17,6 +17,7 @@ import Button from './containers/Button';
 import RenderProps from './containers/RenderProps';
 import Anchor from './containers/Anchor';
 import Affix from './containers/Affix';
+import ReactExtends from './containers/ReactExtends';
 
 const routeMap = {
   DndSample,
@@ -35,6 +36,7 @@ const routeMap = {
   RenderProps,
   Anchor,
   Affix,
+  ReactExtends,
 };
 
 
