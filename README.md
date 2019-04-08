@@ -1,12 +1,13 @@
 # keep-learning
 
+> docs 目录为总结的文档
+
 学习前端使用的项目，将学到的知识总结成功能实现，方便日后使用。
 
 安装:
-  `npm install`
+`npm install`
 
 启动:
-  `npm start`
-
+`npm start`
 
 ![首页](https://github.com/Witee/keep-learning/blob/master/public/images/index.png?raw=true)
