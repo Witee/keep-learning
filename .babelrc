@@ -1,8 +1,11 @@
 {
-  "presets": [ "env", "stage-2", "react" ],
+  "presets": ["env", "stage-2", "react"],
   "plugins": [
     "transform-decorators-legacy",
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }],
+    [
+      "import",
+      { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+    ],
     ["transform-runtime"],
     "react-hot-loader/babel"
   ]
