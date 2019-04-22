@@ -1,6 +1,7 @@
 # Create React App 文档笔记 part-1
 
-> https://facebook.github.io/create-react-app/docs/getting-started[中文文档](https://www.html.cn/create-react-app/docs/getting-started/)
+> [官方文档](https://facebook.github.io/create-react-app/docs/getting-started)
+> [中文文档](https://www.html.cn/create-react-app/docs/getting-started/)
 > react-scripts: 2.1.8
 > create-react-app: 2.1.8
 
