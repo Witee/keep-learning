@@ -24,7 +24,14 @@ const api = (cb) => {
   }, timeOut * 1000);
 };
 
-async.retry(3, api, (err, result) => {
+const retryOpt = {
+  times: 3,
+  errorFilter: (err) => {
+    const status = _.parseInt(_.get(err, 'response.status', 500)); // 只重试指定返回码的请求
+    return status >= 500;
+  },
+};
+async.retry(retryOpt, api, (err, result) => {
   if (err) {
     console.log('err: ', err);
   } else {
