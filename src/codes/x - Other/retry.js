@@ -54,12 +54,18 @@ const api2 = (callback) => {
       }
     }, timeOut * 1000);
   })
-    .then(() => {
-      console.log('api2 call success');
-      callback(null, 'api2 200 OK');
-    })
+    .then(
+      () => {
+        console.log('api2 call success');
+        callback(null, 'api2 200 OK');
+      },
+      (failed) => {
+        console.log('api2 call failed');
+        cb(failed);
+      }
+    )
     .catch(() => {
-      console.log('api2 call failed');
+      console.log('api2 call error');
       callback('api2 api error');
     });
 };

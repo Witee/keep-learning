@@ -14,12 +14,18 @@ const axiosRetry = {
     const api = (cb) => {
       axios
         .post(url, data, config)
-        .then((res) => {
-          console.log('post success');
-          cb(null, res);
-        })
+        .then(
+          (res) => {
+            console.log('post success');
+            cb(null, res);
+          },
+          (failed) => {
+            console.log('post failed');
+            cb(failed);
+          }
+        )
         .catch((err) => {
-          console.log('post failed');
+          console.log('post error');
           cb(err);
         });
     };
