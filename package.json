@@ -8,6 +8,8 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "dependencies": {
+    "async": "^3.1.0",
+    "axios": "^0.19.0",
     "ckeditor": "^4.11.1",
     "classnames": "^2.2.6",
     "echarts": "4.1.0",
