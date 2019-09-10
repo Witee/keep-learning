@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
   async.retry 用法
 
@@ -20,16 +21,16 @@ const retryOpt = {
 };
 
 const api = (callback) => {
-  const timeOut = Math.random() * 2;
+  const timeout = Math.random() * 2;
   setTimeout(() => {
-    if (timeOut < 1) {
+    if (timeout < 1) {
       console.log('call success');
       callback(null, '200 OK');
     } else {
       console.log('call failed');
       callback('api error');
     }
-  }, timeOut * 1000);
+  }, timeout * 1000);
 };
 
 async.retry(retryOpt, api, (err, result) => {
@@ -41,18 +42,19 @@ async.retry(retryOpt, api, (err, result) => {
 });
 
 // 如果 api 返回 promise，则会报 TypeError: callback is not a function
-// 此时需要使用 promise 的 then() 方法定义 api
+// 此时需要在 promise 的 then() 方法中调用 callback
 
 const api2 = (callback) => {
-  const timeOut = Math.random() * 2;
+  const timeout = Math.random() * 2;
+
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (timeOut < 1) {
+      if (timeout < 1) {
         resolve();
       } else {
         reject();
       }
-    }, timeOut * 1000);
+    }, timeout * 1000);
   })
     .then(
       () => {
@@ -61,7 +63,7 @@ const api2 = (callback) => {
       },
       (failed) => {
         console.log('api2 call failed');
-        cb(failed);
+        callback(failed);
       }
     )
     .catch(() => {
