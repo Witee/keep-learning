@@ -5,14 +5,14 @@
   - 链接外部样式文件:
   	`<link type="text/css" rel="stylesheet" href="style.css" />`
   - 导入外部样式:
-    ```
+    ```css
       <style type="text/css">
         @import "outer.css"
         @import url("mycss.css")
       </style>
     ```
   - 使用内部CSS样式:
-    ```
+    ```css
       <style type="text/css">
         ...
       </style>
@@ -27,16 +27,16 @@
     - `E[attr]{...}`: 具有`attr`属性的E元素起作用: `div[id] {...} //具有id属性的div`
     - `E[attr=value]{...}`: 包含`attr`且值为`value`
     - `E[attr~=value]{...}`: 包含`attr`且值为以空格隔开的系列值，其中某个值为`value`
-      ```
-      <style>
+      ```css
+      <style type="text/css">
         img[title~=flower]{...}
       </style>
 
       <img src="/i/eg_tulip.jpg" title="tulip flower" /> // 选中
       ```
-    - `E[attr|=value]{...}`: 包含`attr`且值为以连字符分隔的系列值，且第一个值为`value`
-      ```
-        <style>
+    - `E[attr|=value]{...}`: 包含`attr` 且 值 为以连字符或整个 `value` 开头的值
+      ```css
+        <style type="text/css">
           p[lang|=en]{...}
         </style>
 
@@ -52,7 +52,7 @@
   - class选择器: `[E].classValue {...} // E可选`
 
   - 包含选择器: `Selector1 Selector2 {...}`
-    ```
+    ```html
       /* 处于div之内且class属性为a的元素 */
       div .a {...}
 
@@ -64,7 +64,7 @@
     ```
 
   - 子选择器: `Selector1 > Selector2 {...}`
-    ```
+    ```html
       /* div的直接子元素且class属性为a的元素 */
       div>.a {...}
 
@@ -72,7 +72,7 @@
     ```
 
   - CSS3 新增的兄弟选择器: `Selector1 ~ Selector2 {...}`
-    ```
+    ```html
       #android ~ .long {...}
 
       <div id="android">aaa</div>
@@ -86,7 +86,7 @@
     - `:first-letter`: 指定对象内的第一个字符
 
       仅对块元素(如`<div.../>`、`<p.../>`、 `<section.../>等`)起作用。如果想对内联元素(如`<span.../>`等)使用该属性，必须先设定对象的`height`、`width`属性，或者设定`position`属性为`absolute`，或者设定`display`属性为`block`。通过选择器配合`font-size`、`float`属性可制作首字下沉效果
-      ```
+      ```html
         <style type="text/css">
           span {display: block;}
           span:first-letter {color: #f00; font-fize: 20pt;}
@@ -107,7 +107,7 @@
 
   - 内容相关的属性
     - `content`: 值可以是字符串、`url(url)`、`attr(alt)`、`counter(name)`、`counter(name, list-style-type)`、 `open-quote`、`close-quote`等格式。用于向指定元素之前或之后插入指定内容。
-    ```
+    ```html
       div>div:before {content: 'AAA'}
 
       <div>
@@ -226,7 +226,7 @@
 #### CSS3新增的服务器字体
   - 格式:
 
-    ```
+    ```html
       @font-face {
         font-family: NAME;
         src: url(URL) format(FONTFORMAT);
