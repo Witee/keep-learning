@@ -85,7 +85,8 @@ REACT_APP_BAR=$DOMAIN/bar
 
 #### Creating a Production Build
 
-> [缓存的最佳实践](https://jakearchibald.com/2016/caching-best-practices/) > [HTTP 缓存原理](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses)
+> [缓存的最佳实践](https://jakearchibald.com/2016/caching-best-practices/) 
+> [HTTP 缓存原理](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses)
 
 使用 `npm run build` 命令会创建生产环境的 `build` 目录，`build/static` 目录是 JavaScript 和 CSS 文件。
 
