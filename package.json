@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "reinstall": "rm -rf ./node_modules && npm i"
   },
   "dependencies": {
     "async": "^3.1.0",
@@ -17,7 +18,7 @@
     "moment": "^2.22.2",
     "open-combine-design": "^1.0.58",
     "promise": "8.0.1",
-    "react": "^16.2.0",
+    "react": "^16.10.2",
     "react-dom": "^16.2.0",
     "react-hammerjs": "^1.0.1"
   },
@@ -43,10 +44,12 @@
     "echarts-for-react": "^2.0.15-beta.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.39.1",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.11.0",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
@@ -65,7 +68,7 @@
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
-    "webpack-dev-server": "3.3.0",
+    "webpack-dev-server": "3.0.0",
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   }
