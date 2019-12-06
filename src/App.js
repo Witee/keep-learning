@@ -18,6 +18,7 @@ import RenderProps from './containers/RenderProps';
 import Anchor from './containers/Anchor';
 import Affix from './containers/Affix';
 import ReactExtends from './containers/ReactExtends';
+import Layout from './containers/Layout';
 
 const routeMap = {
   DndSample,
@@ -37,11 +38,11 @@ const routeMap = {
   Anchor,
   Affix,
   ReactExtends,
+  Layout,
 };
 
-
 class App extends React.PureComponent {
-  handleLinkClick = (key) => {
+  handleLinkClick = key => {
     window.history.pushState(null, '', `/#/${key}`);
     this.forceUpdate();
   };
@@ -54,7 +55,7 @@ class App extends React.PureComponent {
     return (
       <div className="root-container">
         <ul className="menu-list">
-          {Object.keys(routeMap).map((key) => (
+          {Object.keys(routeMap).map(key => (
             <li
               key={key}
               className={key === currentPage ? 'is-active' : ''}

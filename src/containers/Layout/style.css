@@ -1,0 +1,31 @@
+#layout .l1 .outer {
+  background-color: #ccc;
+}
+
+#layout .l1 .inner {
+  width: 33.33%;
+  height: 300px;
+  display: inline-block;
+  outline: solid 1px blue;
+}
+
+#layout .l2 .fixed {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#layout .l2 .fixed,
+#layout .l2 .auto {
+  height: 300px;
+  outline: solid 1px blue;
+}
+
+#layout .l2 .auto {
+  margin-left: 200px;
+  padding-left: 200px;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
