@@ -14,7 +14,7 @@
     "ckeditor": "^4.11.1",
     "classnames": "^2.2.6",
     "echarts": "4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.22.2",
     "open-combine-design": "^1.0.58",
     "promise": "8.0.1",
