@@ -93,6 +93,7 @@ restify 中使用 `server.on('request', (res, req) => {})` 监听请求事件, �
   console.log('return user'); // next() 没有 return 时, 会执行
 };
 ```
+  如果 `next()` 中参数为 `Error` 对象, 则会终止执行后续的处理链, 如果不是对象, 则会继续执行.
 
 - 可以使用 `res.send(new Error('some error'));` 返回错误吗
 
