@@ -1,6 +1,4 @@
 ## Day 6 浏览器1 - JavaScript学习计划
-> 所有学习内容整理为7份，每天1份，使用艾宾浩斯记忆方法进行学习。
-
 #### 浏览器对象
 
   - window
@@ -73,19 +71,19 @@
 
 
     `document`对象还有一个`cookie`属性，可以获取当前页面的Cookie。
-
+    
     Cookie是由服务器发送的key-value标示符。因为HTTP协议是无状态的，但是服务器要区分到底是哪个用户发过来的请求，就可以用Cookie来区分。当一个用户成功登录后，服务器发送一个Cookie给浏览器，例如`user=ABC123XYZ(加密的字符串)...`，此后，浏览器访问该网站时，会在请求头附上这个Cookie，服务器根据Cookie即可区分出用户。
-
+    
     Cookie还可以存储网站的一些设置，例如，页面显示的语言等等。
-
+    
     JavaScript可以通过`document.cookie`读取到当前页面的Cookie：
-
+    
     ```
       document.cookie; // 'v=123; remember=true; prefer=zh'
     ```
-
+    
     由于JavaScript能读取到页面的Cookie，而用户的登录信息通常也存在Cookie中，这就造成了巨大的安全隐患，这是因为在HTML页面中引入第三方的JavaScript代码是允许的：
-
+    
     ```
       <!-- 当前页面在wwwexample.com -->
       <html>
@@ -95,21 +93,21 @@
           ...
       </html>
     ```
-
+    
     如果引入的第三方的JavaScript中存在恶意代码，则`www.foo.com`网站将直接获取到`www.example.com`网站的用户登录信息。
-
+    
     为了解决这个问题，服务器在设置Cookie时可以使用`httpOnly`，设定了`httpOnly`的Cookie将不能被JavaScript读取。这个行为由浏览器实现，主流浏览器均支持`httpOnly`选项，IE从IE6 SP1开始支持。
-
+    
     为了确保安全，服务器端在设置Cookie时，应该始终坚持使用`httpOnly`。
-
+    
     - history
-
+    
       `history`对象保存了浏览器的历史记录，JavaScript可以调用`history`对象的`back()`或`forward ()`，相当于用户点击了浏览器的“后退”或“前进”按钮。
-
+    
       这个对象属于历史遗留对象，对于现代Web页面来说，由于大量使用AJAX和页面交互，简单粗暴地调用`history.back()`可能会让用户感到非常愤怒。
-
+    
       新手开始设计Web页面时喜欢在登录页登录成功时调用`history.back()`，试图回到登录前的页面。这是一种错误的方法。
-
+    
       任何情况，你都不应该使用`history`这个对象了。
 
 #### 操作DOM

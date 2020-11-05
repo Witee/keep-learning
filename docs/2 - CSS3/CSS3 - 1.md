@@ -57,7 +57,7 @@
 
 - class 选择器: `[E].classValue {...} // E可选`
 
-- 包含选择器: `Selector1 Selector2 {...}`
+- 包含选择器(后代选择器): `Selector1 Selector2 {...}`
 
   ```html
   /* 处于div之内且class属性为a的元素 */ div .a {...}

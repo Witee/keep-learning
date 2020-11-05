@@ -1,12 +1,10 @@
 ## Day 1 快速入门 - JavaScript学习计划
 
-> 所有学习内容整理为7份，每天1份，使用艾宾浩斯记忆方法进行学习。
-
 #### 数据类型和变量
 
 - Number
 
-  > 不区分整数和浮点数，统一用Number表示
+  不区分整数和浮点数，统一用Number表示
 
   ```
   123; // 整数123
@@ -117,7 +115,7 @@
       `这是一个
       多行
       字符串`;
-    ```  
+    ```
   - 模板字符串
 
     ```
@@ -511,71 +509,74 @@
           .set('no', false);
         strMapToObj(myMap)
         // { yes: true, no: false }
-    ```
-
-    - 对象转为 Map
-
       ```
+```
+    
+- 对象转为 Map
+    
+    ```
         function objToStrMap(obj) {
           let strMap = new Map();
           for (let k of Object.keys(obj)) {
             strMap.set(k, obj[k]);
           }
           return strMap;
-        }
-
+    }
+        
         objToStrMap({yes: true, no: false})
         // Map {"yes" => true, "no" => false}
-      ```
-
-    - Map 转为 JSON
-
-      Map 转为 JSON 要区分两种情况。一种情况是，Map 的键名都是字符串，这时可以选择转为对象 JSON。
-
+  ```
+    
+- Map 转为 JSON
+    
+  Map 转为 JSON 要区分两种情况。一种情况是，Map 的键名都是字符串，这时可以选择转为对象 JSON。
+    
       ```
         function strMapToJson(strMap) {
           return JSON.stringify(strMapToObj(strMap));
-        }
-
+    }
+        
         let myMap = new Map().set('yes', true).set('no', false);
         strMapToJson(myMap)
         // '{"yes":true,"no":false}'
-      ```
-
-      另一种情况是，Map 的键名有非字符串，这时可以选择转为数组 JSON。
-
+  ```
+    
+  另一种情况是，Map 的键名有非字符串，这时可以选择转为数组 JSON。
+    
       ```
         function mapToArrayJson(map) {
           return JSON.stringify([...map]);
-        }
-
+    }
+        
         let myMap = new Map().set(true, 7).set({foo: 3}, ['abc']);
         mapToArrayJson(myMap)
         // '[[true,7],[{"foo":3},["abc"]]]'
-      ```
-
-    - JSON 转为 Map
-
-      JSON 转为 Map，正常情况下，所有键名都是字符串。
-
+  ```
+    
+- JSON 转为 Map
+    
+  JSON 转为 Map，正常情况下，所有键名都是字符串。
+    
       ```
         function jsonToStrMap(jsonStr) {
           return objToStrMap(JSON.parse(jsonStr));
-        }
-
+    }
+        
         jsonToStrMap('{"yes": true, "no": false}')
         // Map {'yes' => true, 'no' => false}
-      ```
-
-      但是，有一种特殊情况，整个 JSON 就是一个数组，且每个数组成员本身，又是一个有两个成员的数组。这时，它可以一一对应地转为 Map。这往往是数组转为 JSON 的逆操作。
-
+  ```
+    
+  但是，有一种特殊情况，整个 JSON 就是一个数组，且每个数组成员本身，又是一个有两个成员的数组。这时，它可以一一对应地转为 Map。这往往是数组转为 JSON 的逆操作。
+    
       ```
         function jsonToMap(jsonStr) {
           return new Map(JSON.parse(jsonStr));
-        }
-
+    }
+        
         jsonToMap('[[true,7],[{"foo":3},["abc"]]]')
         // Map {true => 7, Object {foo: 3} => ['abc']}
+      ```
+    
       ```
 
 ---
@@ -681,7 +682,7 @@
           // red
           // green
           // blue
-        ```  
+        ```
 
       - `forEach()`：使用回调函数遍历每个成员
 

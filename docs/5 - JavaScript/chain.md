@@ -6,7 +6,7 @@
 
 examples: `./src/codes/x - Other/chain.js`
 
-```
+```js
 // example1:
 const plugins = [];
 
@@ -23,7 +23,7 @@ console.log('plugins: ', plugins); // plugins:  [ 'a', 'b' ]
 
 ```
 
-```
+```js
 // example2:
 const persion = {
   set: (age) => {
