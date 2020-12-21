@@ -1,6 +1,10 @@
 # keep-learning
 
-> 学习前端使用的项目，将学到的知识总结成功能实现，方便日后使用。
+---
+
+## blog 请访问 [issues](https://github.com/Witee/keep-learning/issues)
+
+---
 
 #### STRUCTURE
 
