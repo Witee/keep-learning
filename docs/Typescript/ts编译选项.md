@@ -38,7 +38,7 @@ const sum = (a, b) => a + b;
 一个 js 文件就是一个模块, 在 nodejs 和 浏览器 环境中使用的模块是不一样的.
 
 - commonjs : 只能在 nodejs 环境中使用, 也就是在服务端运行
-- es6, esnext等: 是js官方的模块化规范, 只能在浏览器环境运行
+- ES2015, ES6, esnext等: 是js官方的模块化规范, 只能在浏览器环境运行
 - umd: 既可以在服务端运行也可以在浏览器运行
 
 源码 `index.ts` , typescript 默认使用 es6 模块规范
