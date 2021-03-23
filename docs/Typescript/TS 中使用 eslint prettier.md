@@ -1,6 +1,6 @@
 # TS 中使用 ESLint prettier
 
-
+> 演示项目: https://github.com/Witee/ts-eslint-starter
 
 ## 初始化一个项目
 
@@ -46,28 +46,26 @@ Wrote to /Users/Witee/temp/test-eslint/package.json:
 
 4 directories, 6 files
 
-➜  test-eslint cat build/test.ts 
-console.log('test');            
+➜  test-eslint cat build/test.ts
+console.log('test');
 
-➜  test-eslint cat src/index.ts 
+➜  test-eslint cat src/index.ts
 import { add } from './libs/add';
 
   console.log('add: ',  add(1, 2));
-  
-➜  test-eslint cat src/libs/add.ts 
+
+➜  test-eslint cat src/libs/add.ts
 export const add: Add = (a, b) => {
   return a + b;
 };
 
-➜  test-eslint cat src/types/global.d.ts 
+➜  test-eslint cat src/types/global.d.ts
 // 声明分局类型
 type Add = (x: number, y: number) => number;
 
-➜  test-eslint cat src/test.js 
+➜  test-eslint cat src/test.js
   console.log('this is js code');
 ```
-
-
 
 ## 安装 ESLint 并使用内建规则
 
@@ -84,7 +82,7 @@ eslint 在安装完成后有一些内建的规则, 但并没有进行启用, 可
 项目根目录下创建 ESLint 配置文件, 并启用 `no-console` 规则.
 
 ```shell
-➜  test-eslint cat .eslintrc.js 
+➜  test-eslint cat .eslintrc.js
 module.exports = {
   rules: {
     'no-console': 'warn',
@@ -94,7 +92,7 @@ module.exports = {
 
 配置后, 在 vscode 控制台有如下提示:
 
-![image-20210322145057292](/Users/Witee/Library/Application Support/typora-user-images/image-20210322145057292.png)
+![image-20210322145057292](https://tva1.sinaimg.cn/large/008eGmZEly1gotlzb53uaj30bq0320su.jpg)
 
 注意, 这里只对 `src/test.js` 生效了, 而 `src/index.ts` 却没有, 原因是默认解析器`espree` 只能解析 `js` 文件.
 
@@ -103,7 +101,7 @@ module.exports = {
 ```shell
 npm i -D typescript @typescript-eslint/parser
 
-➜  test-eslint cat .eslintrc.js 
+➜  test-eslint cat .eslintrc.js
 module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
@@ -112,9 +110,9 @@ module.exports = {
 };
 ```
 
-此时vscode可以看到提示
+此时 vscode 可以看到提示
 
-![image-20210322145018469](/Users/Witee/Library/Application Support/typora-user-images/image-20210322145018469.png)
+![image-20210322145018469](https://tva1.sinaimg.cn/large/008eGmZEly1gotlz647lqj30bh04pjry.jpg)
 
 此时有个问题, 内建规则有很多, 使用上面手工方式一一启用很麻烦, 可以使用 `"extends": "eslint:recommended"` 启用推荐规则.
 
@@ -132,11 +130,9 @@ module.exports = {
 
 测试结果如下:
 
-![image-20210322150345890](/Users/Witee/Library/Application Support/typora-user-images/image-20210322150345890.png)
+![image-20210322150345890](https://tva1.sinaimg.cn/large/008eGmZEly1gotlzofnicj30d704pdg7.jpg)
 
-![image-20210322150420810](/Users/Witee/Library/Application Support/typora-user-images/image-20210322150420810.png)
-
-
+![image-20210322150420810](https://tva1.sinaimg.cn/large/008eGmZEly1gotlzr8ikjj30bh05awev.jpg)
 
 `no-console` 规则并没有在推荐规则中, 查看列表发现 [no-debugger](https://cn.eslint.org/docs/rules/no-debugger) 在列表中, 另外此时 `console`报的错误是推荐规则中 `no-undef`触发的.
 
@@ -159,7 +155,7 @@ npm i -D @typescript-eslint/eslint-plugin
 ### 加载插件
 
 ```shell
-➜  test-eslint cat .eslintrc.js 
+➜  test-eslint cat .eslintrc.js
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -171,15 +167,13 @@ module.exports = {
 
 此时并没有启用任何规则.
 
-
-
 ### airbnb 扩展
 
- [airbnb扩展](https://github.com/airbnb/javascript) 中定义了大量规则的最佳实践, 在 `packages` 目录是可用的两个扩展:
+[airbnb 扩展](https://github.com/airbnb/javascript) 中定义了大量规则的最佳实践, 在 `packages` 目录是可用的两个扩展:
 
 - `eslint-config-airbnb-base`:
-    This package provides Airbnb's base JS .eslintrc (without React plugins) as an extensible shared config.
-    该软件包提供了Airbnb的基础JS .eslintrc（不带React插件）作为可扩展的共享配置。
+  This package provides Airbnb's base JS .eslintrc (without React plugins) as an extensible shared config.
+  该软件包提供了 Airbnb 的基础 JS .eslintrc（不带 React 插件）作为可扩展的共享配置。
 
 - `eslint-config-airbnb`: 同样, 此包是包含 React 插件的, 所以前端项目需要安装此包.
 
@@ -191,7 +185,7 @@ module.exports = {
 
 ```shell
 ➜  test-eslint npm info "eslint-config-airbnb-base@latest" peerDependencies  // 查看依赖版本
- 
+
 {
   eslint: '^5.16.0 || ^6.8.0 || ^7.2.0',
   'eslint-plugin-import': '^2.22.1'
@@ -208,10 +202,10 @@ SUCCESS eslint-config-airbnb-base
 
 ### 配置 eslint-config-airbnb-base
 
-.eslintrc.js 中启用规则,  `"extends": "airbnb-base"`
+.eslintrc.js 中启用规则, `"extends": "airbnb-base"`
 
 ```shell
-➜  test-eslint cat .eslintrc.js 
+➜  test-eslint cat .eslintrc.js
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -225,9 +219,7 @@ module.exports = {
 
 此时可以显示出很多提示了:
 
-![image-20210322160336873](/Users/Witee/Library/Application Support/typora-user-images/image-20210322160336873.png)
-
-
+![image-20210322160336873](https://tva1.sinaimg.cn/large/008eGmZEly1gotlzvfah1j30bu03vdg7.jpg)
 
 eslint 提供了命令行可以批量修复
 
@@ -235,12 +227,9 @@ eslint 提供了命令行可以批量修复
 eslint SOME_FILE --fix
 ```
 
-
-
 还可以使用 `rules` 字段覆盖扩展中的规则设置.
 
-## 与  prettier 配合
-
+## 与 prettier 配合
 
 现在还有两个问题需要解决
 
@@ -248,8 +237,6 @@ eslint SOME_FILE --fix
 2. 批量修复不方便
 
 以上两个可以通过与 prettier 配合解决.
-
-
 
 ### 安装 prettier 及扩展
 
@@ -259,16 +246,14 @@ eslint SOME_FILE --fix
 npm i -D prettier eslint-config-prettier
 ```
 
-`eslint-config-prettier`: 解决ESLint中的样式规范和prettier中样式规范的冲突，以prettier的样式规范为准，使ESLint中的样式规范自动失效。
-
-
+`eslint-config-prettier`: 解决 ESLint 中的样式规范和 prettier 中样式规范的冲突，以 prettier 的样式规范为准，使 ESLint 中的样式规范自动失效。
 
 ### 配置 prettier
 
 在项目根目录下增加配置文件
 
 ```shell
-➜  test-eslint cat .prettierrc.js 
+➜  test-eslint cat .prettierrc.js
 module.exports = {
   semi: true,
   trailingComma: 'all',
@@ -277,12 +262,10 @@ module.exports = {
 };
 ```
 
-
-
 在 `extends` 列表中后一条增加 `prettier`
 
 ```shell
-➜  test-eslint cat .eslintrc.js 
+➜  test-eslint cat .eslintrc.js
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -311,15 +294,11 @@ module.exports = {
 
 更多配置查询官网: https://cn.eslint.org/docs/user-guide/configuring
 
-- env:  { node: true, es6: true }  支持新的全局变量,  如果需要在浏览器中运行, 则需要添加  browser: true
+- env: { node: true, es6: true } 支持新的全局变量, 如果需要在浏览器中运行, 则需要添加 browser: true
 
-    更多配置: https://cn.eslint.org/docs/user-guide/configuring#specifying-environments
+  更多配置: https://cn.eslint.org/docs/user-guide/configuring#specifying-environments
 
-    
-
-- ignorePatterns: ['node_modules', 'build', 'coverage', 'dist'],  忽略指定的文件或目录
-
-
+- ignorePatterns: ['node_modules', 'build', 'coverage', 'dist'], 忽略指定的文件或目录
 
 ## 常见问题
 
@@ -362,14 +341,15 @@ module.exports = {
    ```
 
 3. 'x' is defined but never used.eslint(no-unused-vars)
-    在 rules 中添加配置
-    ```js
-    rules: {
-        ...
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'error',
-      },
-    ```
+   在 rules 中添加配置
+
+   ```js
+   rules: {
+       ...
+       'no-unused-vars': 'off',
+       '@typescript-eslint/no-unused-vars': 'error',
+     },
+   ```
 
 4. Cannot find name 'console'
 
@@ -380,5 +360,4 @@ module.exports = {
    ```
 
 5. 'Add' is not defined.eslint(no-undef) 声明类型提示 no-undef
-	`rules` 增加 `'no-undef': 'off'` 并在 tsconfig.json 中 设置 `noUnusedLocals: true`  `noUnusedParameters: true`
-
+   `rules` 增加 `'no-undef': 'off'` 并在 tsconfig.json 中 设置 `noUnusedLocals: true` `noUnusedParameters: true`
