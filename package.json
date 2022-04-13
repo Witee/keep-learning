@@ -9,7 +9,7 @@
     "reinstall": "rm -rf ./node_modules && npm i"
   },
   "dependencies": {
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "axios": "^0.21.1",
     "ckeditor": "^4.11.1",
     "classnames": "^2.2.6",
