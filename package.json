@@ -15,7 +15,7 @@
     "classnames": "^2.2.6",
     "echarts": "4.1.0",
     "lodash": "^4.17.21",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "open-combine-design": "^1.0.58",
     "promise": "8.0.1",
     "react": "^16.10.2",
